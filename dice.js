@@ -1,9 +1,15 @@
         var playerOneName = prompt("Player One Name?");
         var playerTwoName = prompt("Player Two Name?");
 
+        if (playerOneName == ""){
+            playerOneName="Player One";
+        }
+        if (playerTwoName==""){
+            playerTwoName="Player Two";
+        }
+
         document.getElementById("playerOneName").innerHTML=playerOneName;
         document.getElementById("playerTwoName").innerHTML=playerTwoName;
-
 
         //declare player tokens.
     var playerOneTokens = 0;
@@ -14,6 +20,27 @@
         //get player one dice:
 
         var p1d1 = Math.floor((Math.random()*6)+1);
+//
+//        switch (p1d1){
+//            case "1":
+//                alert("TEST");
+//                break;
+//            case "2":
+//                alert("TEST");
+//                break;
+//            case "3":
+//                alert("Test");
+//                break;
+//            case "4":
+//                alert("DA");
+//                break;
+//            case "5":
+//                alert("Niet");
+//                break;
+//            case "6":
+//                alert("Niet");
+//                break;
+//        }
         var p1d2 = Math.floor((Math.random()*6)+1);
         var p1d3 = Math.floor((Math.random()*6)+1);
         var p1d4 = Math.floor((Math.random()*6)+1);
@@ -67,5 +94,8 @@
         else {
             document.getElementById("rollResult").innerHTML="It's a DRAW!"
         }
+
+
+
 
     }
