@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2b5799f3-cbd9-4e9e-9e52-4a0b69fcf456" name="Default" comment="Dice!">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css.css" afterPath="$PROJECT_DIR$/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dice.js" afterPath="$PROJECT_DIR$/dice.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+    <list default="true" id="2b5799f3-cbd9-4e9e-9e52-4a0b69fcf456" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Dice Game.iws" />
@@ -240,7 +237,11 @@
       <created>1391907919730</created>
       <updated>1391907919730</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Dice!">
+      <created>1391911211467</created>
+      <updated>1391911211467</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
