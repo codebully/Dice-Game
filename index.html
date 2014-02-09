@@ -7,15 +7,14 @@
 </head>
 
 <body>
-    <script src="dice.js"></script>
     <h1>DICE, BITCH!</h1>
 
     <div>
 
     <table>
         <tr>
-            <th id="playerOneName" colspan="5">Player One</th>
-            <th id="playerTwoName" colspan="5">Player Two</th>
+            <th id="playerOneName" colspan="5" onload="getName()">Player One</th>
+            <th id="playerTwoName" colspan="5" onload="getName()">Player Two</th>
         </tr>
         <tr>
             <td id="p1d1"><img src=""> </td>
@@ -48,7 +47,7 @@
 
     <br><br>
 
-<button id="roll" onclick="rollEm()">ROLL 'EM!</button>
-
+    <button id="roll" onclick="rollEm()">ROLL 'EM!</button>
+    <script src="dice.js"></script>
 
 </body>

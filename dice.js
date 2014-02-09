@@ -1,21 +1,13 @@
-//
-//    function getName()
-//    {
-//        var playerOne = prompt("Player One Name?");
-//        var playerTwo = prompt("Player Two Name?");
-//        console.log(playerOne);
-//        console.log(playerTwo);
-//
-//        document.getElementById("PlayerOne").innerHTML=playerOne;
-//        document.getElementById("PlayerTwo").innerHTML=playerTwo;
-//
-//    }
-//
-//    getName()
+        var playerOneName = prompt("Player One Name?");
+        var playerTwoName = prompt("Player Two Name?");
+
+        document.getElementById("playerOneName").innerHTML=playerOneName;
+        document.getElementById("playerTwoName").innerHTML=playerTwoName;
+
 
         //declare player tokens.
-        var playerOneTokens = 0;
-        var playerTwoTokens = 0;
+    var playerOneTokens = 0;
+    var playerTwoTokens = 0;
 
     function rollEm()
     {
@@ -61,14 +53,14 @@
         if (playerOneTotal > playerTwoTotal){
 
             playerOneTokens++;
-            document.getElementById("rollResult").innerHTML="Player One Wins!";
+            document.getElementById("rollResult").innerHTML=playerOneName + " Wins!";
             document.getElementById("playerOneTokens").innerHTML=playerOneTokens;
 
         }
         else if (playerOneTotal < playerTwoTotal){
 
             playerTwoTokens++;
-            document.getElementById("rollResult").innerHTML="Player Two Wins!";
+            document.getElementById("rollResult").innerHTML=playerTwoName + " Wins!";
             document.getElementById("playerTwoTokens").innerHTML=playerTwoTokens;
 
         }
