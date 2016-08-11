@@ -1,0 +1,59 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: 'VT323';
+}
+
+.players {
+  margin: auto;
+  display:flex;
+  flex-direction:row;
+}
+
+#playerOnePane {
+  margin: inherit;
+  width: 50%;
+  display:flex;
+  flex-direction: column;
+}
+
+#playerTwoPane {
+    margin: inherit;
+    width: 50%;
+    display:flex;
+    flex-direction: column;
+}
+
+.buttons {
+  margin: auto;
+  display:flex;
+  flex-direction:row;
+  justify-content: space-around;
+}
+
+h1 {
+  margin: inherit;
+}
+
+.dieImage {
+  padding-top: 10px;
+  width: 81px;
+  height: 81px;
+  margin: auto;
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: 'VT323';
+}
+
+#reset {
+  background-color: #f44336;
+}
