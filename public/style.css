@@ -4,62 +4,109 @@ body {
   font-family: 'VT323';
 }
 
-.players {
-  margin: auto;
-  display:flex;
-  flex-direction:row;
-}
-
-#playerOnePane {
-  margin: inherit;
-  width: 50%;
-  display:flex;
-  flex-direction: column;
-}
-
-#playerTwoPane {
-    margin: inherit;
-    width: 50%;
-    display:flex;
-    flex-direction: column;
-}
-
-.buttons {
-  margin: auto;
-  display:flex;
-  flex-direction:row;
-  justify-content: space-around;
-}
-
 h1 {
   margin: inherit;
 }
 
 .dieImage {
   padding-top: 10px;
-  width: 81px;
-  height: 81px;
+  width: 100px;
+  height: 100px;
   margin: auto;
 }
 
 .button {
-    background-color: #4CAF50; /* Green */
     border: none;
     color: white;
-    padding: 15px 32px;
+    height: 250px;
+    width: 250px;
+    /*padding: 50px 50px;*/
     text-align: center;
-    text-decoration: none;
+    /*text-decoration: none;*/
     display: inline-block;
-    font-size: 16px;
+    font-size: 3em;
     font-family: 'VT323';
+    background-image: -webkit-linear-gradient(#3F59F4 0%, #FF0009 100%);
+}
+
+#buttons {
+  text-align: center;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;
 }
 
 #reset {
   background-color: #f44336;
 }
 
-#wrapper{
-  max-width: 500px;
-  margin: auto;
-  //border: 1px solid red;
+#playerOne {
+  text-align: center;
+}
+
+#playerTwo {
+  text-align: center;
+}
+
+#playersSection {
+  font-size: 2em;
+}
+
+#headline {
+  font-family: 'Teko', sans-serif;
+  text-align: center;
+  font-size: 6.5em;
+  -webkit-text-stroke-width: 0.25px;
+  -webkit-text-stroke-color: white;
+}
+
+#hideFooter {
+  text-align: right;
+}
+
+.victory {
+  position: relative;
+  font-family: 'Teko', sans-serif;
+  font-variant:small-caps;
+  background-image: -webkit-linear-gradient(#FF3300 0%,  #3F59F4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-filter: drop-shadow(2px 2px 20px #f008b7);
+}
+
+.victory-v {
+  position: relative;
+  background-image: -webkit-linear-gradient(#FF3300 0%,  #3F59F4 100%);
+  -webkit-background-clip: text;
+  padding-right: 18px;
+  margin-right: -18px;
+}
+
+#darkgrey {
+  background-color: white;
+  opacity: 0.25;
+  text-align: center;
+  visibility: hidden;
+  margin-top: 5px;
+}
+
+/* Bounce In */
+.githubLogo {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.githubLogo:hover, .darkgrey:focus, .darkgrey:active {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
 }

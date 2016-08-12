@@ -1,5 +1,6 @@
 var playerOneScore = 0;
 var playerTwoScore = 0;
+var multiplier = 1;
 
 function reset() {
   playerOneScore = 0;
@@ -10,7 +11,6 @@ function reset() {
 }
 
 function setPrettyFaces() {
-  console.log(document.getElementById('playerOneDie').src)
   document.getElementById('playerOneDie').src = "./images/trollface.png";
   document.getElementById('playerTwoDie').src = "./images/trollface.png";
 }
@@ -21,8 +21,18 @@ function drawNumber() {
 }
 
 function drawsSuck() {
-  console.log("Draw!")
   setPrettyFaces();
+  activateTurboMode();
+}
+
+function activateTurboMode() {
+  document.getElementById('playButton').innerHTML = "TURBO<br /> MODE!"
+  document.getElementById('playButton').style.backgroundImage = "-webkit-linear-gradient(#FD5F00 0%, #3F59F4 100%)"
+}
+
+function shutdownTurboMode() {
+  document.getElementById('playButton').innerHTML = "PLAY";
+  document.getElementById('playButton').style.backgroundImage = "-webkit-linear-gradient(#3F59F4 0%, #FF0009 100%)"
 }
 
 function setDice(playerOne, playerTwo) {
@@ -31,15 +41,50 @@ function setDice(playerOne, playerTwo) {
 }
 
 function compareNumber(playerOne, playerTwo) {
+  shutdownTurboMode()
   if (playerOne > playerTwo) {
-    playerOneScore += 1
+    playerOneScore += 1 * multiplier
     setDice(playerOne, playerTwo);
     document.getElementById('playerOneScore').innerHTML = playerOneScore
+    multiplier = 1
   } else if (playerOne < playerTwo) {
-    playerTwoScore += 1
+    playerTwoScore += 1 * multiplier
     setDice(playerOne, playerTwo);
     document.getElementById('playerTwoScore').innerHTML = playerTwoScore
+    multiplier = 1
   } else if (playerOne === playerTwo) {
     drawsSuck(playerOne, playerTwo)
+    multiplier += 1;
+  }
+}
+
+function enterNames() {
+  var playerOne = prompt("Player One Name?") || "P1";
+  var playerTwo = prompt("Player Two Name?") || "P2";
+  document.getElementById('playerOneName').innerHTML = playerOne.toUpperCase().substring(0,3)
+  document.getElementById('playerTwoName').innerHTML = playerTwo.toUpperCase().substring(0,3)
+}
+
+function printNames(playerOneName, playerTwoName) {
+  console.log(playerOneName + playerTwoName)
+}
+
+footerStatus = "off"
+
+function hideFooter() {
+  document.getElementById('darkgrey').style.visibility = 'hidden';
+  footerStatus = "off";
+}
+
+function showFooter() {
+  document.getElementById('darkgrey').style.visibility = 'visible';
+  footerStatus = "on";
+}
+
+function toggleFooter() {
+  if (footerStatus === "on") {
+    hideFooter();
+  } else {
+    showFooter();
   }
 }

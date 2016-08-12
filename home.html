@@ -1,33 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1"> -->
     <title>DICE.</title>
+    <link rel="stylesheet" href="./public/gridism.css">
     <link type="text/css" rel="stylesheet" href="./public/style.css"/>
     <script src="./public/dice_game.js"></script>
     <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Teko:400,700' rel='stylesheet' type='text/css'>
 </head>
 
 <body onload="reset()">
+<div class="grid">
+  <div class="unit whole">
+    <div class="unit whole">
+      <h1 id="headline" class="victory"><span class="victory-v">D</span>ICE GAME.</h1>
+    </div>
 
-<div class="players" id="wrapper">
-  <div id="playerOnePane">
-      <h1>Player One: <span id='playerOneScore'>Player One:</span></h1>
-    <img src="" class="dieImage" id="playerOneDie"/>
-  </div>
-  <div id="playerTwoPane">
-    <h1>Player Two: <span id='playerTwoScore'>Player Two:</span></h1>
-    <img src="" class="dieImage" id="playerTwoDie"/>
-  </div>
-  <br />
-</div>
-<br />
-<div class="buttons">
-  <button class="button" onclick='compareNumber(drawNumber(), drawNumber())'>PLAY</button>
-  <button class="button" id="reset" onclick='reset()'>RESET</button>
-</div>
+  <div id="playersSection">
+    <div class="unit half" id="playerOne">
+      <h1><span id="playerOneName" onclick="enterNames()">Player One:</span> <span id='playerOneScore'></span></h1>
+      <br />
+      <img src="" class="dieImage" id="playerOneDie"/>
+    </div>
 
-<script>
-</script>
+    <div class="unit half" id="playerTwo">
+      <h1><span id="playerTwoName" onclick="enterNames()">Player Two:</span> <span id='playerTwoScore'></span></h1>
+      <br />
+      <img src="" class="dieImage" id="playerTwoDie"/>
+    </div>
+  </div>
+
+
+    <div id="buttons" class="unit whole">
+      <div class="unit half">
+        <button class="button" id="playButton" onclick='compareNumber(drawNumber(), drawNumber())'>PLAY</button>
+      </div>
+      <div class="unit half">
+        <button class="button" id="reset" onclick='reset()'>RESET</button>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class=".golden-small" id="hideFooter" onclick="toggleFooter()">
+      (more info...)
+    </div>
+    <div id="darkgrey" class="unit whole">
+      <a href="https://github.com/codebully/Dice-Game" target="_blank"><img src="./images/GitHub-Mark-64px.png" class="githubLogo"/></a>
+    </div>
+  </footer>
+</div>
 </body>
+
 </html>
