@@ -26,7 +26,7 @@ function drawsSuck() {
 }
 
 function activateTurboMode() {
-  document.getElementById('playButton').innerHTML = "TURBO<br /> MODE!(" + multiplier + ")"
+  document.getElementById('playButton').innerHTML = "TURBO<br /> MODE! (+" + multiplier + ")"
   document.getElementById('playButton').style.backgroundImage = "-webkit-linear-gradient(#FD5F00 0%, #3F59F4 100%)"
 }
 
