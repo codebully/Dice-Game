@@ -6,13 +6,13 @@ body {
 
 h1 {
   margin: inherit;
+  margin-top: -30px;
 }
 
 .dieImage {
   padding-top: 10px;
   width: 75px;
   height: 75px;
-  margin: auto;
 }
 
 .button {
@@ -20,9 +20,7 @@ h1 {
     color: white;
     height: 250px;
     width: 250px;
-    /*padding: 50px 50px;*/
     text-align: center;
-    /*text-decoration: none;*/
     display: inline-block;
     font-size: 3em;
     font-family: 'VT323';
@@ -83,28 +81,29 @@ h1 {
 
 #darkgrey {
   background-color: white;
-  opacity: 0.25;
+  opacity: 0.9;
   text-align: center;
   visibility: hidden;
   margin-top: 5px;
+  border-radius: 3px 3px 3px 3px;
 }
 
 /* Bounce In */
-.githubLogo {
+.logo {
   width: 32px;
   height: 32px;
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-.githubLogo:hover, .darkgrey:focus, .darkgrey:active {
+.logo:hover, .logo:focus, .logo.active {
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
   -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);

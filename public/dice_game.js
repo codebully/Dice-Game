@@ -1,6 +1,8 @@
 var playerOneScore = 0;
 var playerTwoScore = 0;
 var multiplier = 1;
+var footerStatus = "off"
+
 
 function reset() {
   playerOneScore = 0;
@@ -61,15 +63,13 @@ function compareNumber(playerOne, playerTwo) {
 function enterNames() {
   var playerOne = prompt("Player One Name?") || "P1";
   var playerTwo = prompt("Player Two Name?") || "P2";
-  document.getElementById('playerOneName').innerHTML = playerOne.toUpperCase().substring(0,3) + " :"
-  document.getElementById('playerTwoName').innerHTML = playerTwo.toUpperCase().substring(0,3) + " :"
+  document.getElementById('playerOneName').innerHTML = playerOne.toUpperCase().substring(0,3) + ":"
+  document.getElementById('playerTwoName').innerHTML = playerTwo.toUpperCase().substring(0,3) + ":"
 }
 
 function printNames(playerOneName, playerTwoName) {
   console.log(playerOneName + playerTwoName)
 }
-
-footerStatus = "off"
 
 function hideFooter() {
   document.getElementById('darkgrey').style.visibility = 'hidden';
