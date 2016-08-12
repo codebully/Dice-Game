@@ -26,7 +26,7 @@ function drawsSuck() {
 }
 
 function activateTurboMode() {
-  document.getElementById('playButton').innerHTML = "TURBO<br /> MODE!"
+  document.getElementById('playButton').innerHTML = "TURBO<br /> MODE!(" + multiplier + ")"
   document.getElementById('playButton').style.backgroundImage = "-webkit-linear-gradient(#FD5F00 0%, #3F59F4 100%)"
 }
 
@@ -61,8 +61,8 @@ function compareNumber(playerOne, playerTwo) {
 function enterNames() {
   var playerOne = prompt("Player One Name?") || "P1";
   var playerTwo = prompt("Player Two Name?") || "P2";
-  document.getElementById('playerOneName').innerHTML = playerOne.toUpperCase().substring(0,3)
-  document.getElementById('playerTwoName').innerHTML = playerTwo.toUpperCase().substring(0,3)
+  document.getElementById('playerOneName').innerHTML = playerOne.toUpperCase().substring(0,3) + " :"
+  document.getElementById('playerTwoName').innerHTML = playerTwo.toUpperCase().substring(0,3) + " :"
 }
 
 function printNames(playerOneName, playerTwoName) {
