@@ -43,10 +43,25 @@ function compareNumber(playerOne, playerTwo) {
 }
 
 function enterNames() {
-  document.getElementById('playerOneName').innerHTML = prompt("Player One Name?").toUpperCase().substring(0,3) || "P1"
-  document.getElementById('playerTwoName').innerHTML = prompt("Player Two Name?").toUpperCase().substring(0,3) || "P2"
+  var playerOne = prompt("Player One Name?") || "P1";
+  var playerTwo = prompt("Player Two Name?") || "P2";
+  document.getElementById('playerOneName').innerHTML = playerOne.toUpperCase().substring(0,3)
+  document.getElementById('playerTwoName').innerHTML = playerTwo.toUpperCase().substring(0,3)
 }
 
 function printNames(playerOneName, playerTwoName) {
   console.log(playerOneName + playerTwoName)
+}
+
+status = "on"
+
+function hideFooter() {
+  if (status === "on") {
+    document.getElementById('darkgrey').style.visibility = 'hidden';
+    status = "off";
+  } else {
+    document.getElementById('darkgrey').style.visibility = 'visible';
+    status = "on";
+    console.log(status)
+  }
 }
