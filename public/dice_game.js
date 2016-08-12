@@ -10,7 +10,6 @@ function reset() {
 }
 
 function setPrettyFaces() {
-  console.log(document.getElementById('playerOneDie').src)
   document.getElementById('playerOneDie').src = "./images/trollface.png";
   document.getElementById('playerTwoDie').src = "./images/trollface.png";
 }
@@ -21,7 +20,6 @@ function drawNumber() {
 }
 
 function drawsSuck() {
-  console.log("Draw!")
   setPrettyFaces();
 }
 
@@ -42,4 +40,13 @@ function compareNumber(playerOne, playerTwo) {
   } else if (playerOne === playerTwo) {
     drawsSuck(playerOne, playerTwo)
   }
+}
+
+function enterNames() {
+  document.getElementById('playerOneName').innerHTML = prompt("Player One Name?").toUpperCase().substring(0,3) || "P1"
+  document.getElementById('playerTwoName').innerHTML = prompt("Player Two Name?").toUpperCase().substring(0,3) || "P2"
+}
+
+function printNames(playerOneName, playerTwoName) {
+  console.log(playerOneName + playerTwoName)
 }
