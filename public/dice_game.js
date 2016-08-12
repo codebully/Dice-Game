@@ -1,5 +1,6 @@
 var playerOneScore = 0;
 var playerTwoScore = 0;
+var multiplier = 1;
 
 function reset() {
   playerOneScore = 0;
@@ -21,6 +22,17 @@ function drawNumber() {
 
 function drawsSuck() {
   setPrettyFaces();
+  activateTurboMode();
+}
+
+function activateTurboMode() {
+  document.getElementById('playButton').innerHTML = "TURBO<br /> MODE!"
+  document.getElementById('playButton').style.backgroundImage = "-webkit-linear-gradient(#FD5F00 0%, #3F59F4 100%)"
+}
+
+function shutdownTurboMode() {
+  document.getElementById('playButton').innerHTML = "PLAY";
+  document.getElementById('playButton').style.backgroundImage = "-webkit-linear-gradient(#3F59F4 0%, #FF0009 100%)"
 }
 
 function setDice(playerOne, playerTwo) {
@@ -29,16 +41,20 @@ function setDice(playerOne, playerTwo) {
 }
 
 function compareNumber(playerOne, playerTwo) {
+  shutdownTurboMode()
   if (playerOne > playerTwo) {
-    playerOneScore += 1
+    playerOneScore += 1 * multiplier
     setDice(playerOne, playerTwo);
     document.getElementById('playerOneScore').innerHTML = playerOneScore
+    multiplier = 1
   } else if (playerOne < playerTwo) {
-    playerTwoScore += 1
+    playerTwoScore += 1 * multiplier
     setDice(playerOne, playerTwo);
     document.getElementById('playerTwoScore').innerHTML = playerTwoScore
+    multiplier = 1
   } else if (playerOne === playerTwo) {
     drawsSuck(playerOne, playerTwo)
+    multiplier += 1;
   }
 }
 
@@ -53,15 +69,22 @@ function printNames(playerOneName, playerTwoName) {
   console.log(playerOneName + playerTwoName)
 }
 
-status = "on"
+footerStatus = "off"
 
 function hideFooter() {
-  if (status === "on") {
-    document.getElementById('darkgrey').style.visibility = 'hidden';
-    status = "off";
+  document.getElementById('darkgrey').style.visibility = 'hidden';
+  footerStatus = "off";
+}
+
+function showFooter() {
+  document.getElementById('darkgrey').style.visibility = 'visible';
+  footerStatus = "on";
+}
+
+function toggleFooter() {
+  if (footerStatus === "on") {
+    hideFooter();
   } else {
-    document.getElementById('darkgrey').style.visibility = 'visible';
-    status = "on";
-    console.log(status)
+    showFooter();
   }
 }

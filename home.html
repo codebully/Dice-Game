@@ -34,7 +34,7 @@
 
     <div id="buttons" class="unit whole">
       <div class="unit half">
-        <button class="button" onclick='compareNumber(drawNumber(), drawNumber())'>PLAY</button>
+        <button class="button" id="playButton" onclick='compareNumber(drawNumber(), drawNumber())'>PLAY</button>
       </div>
       <div class="unit half">
         <button class="button" id="reset" onclick='reset()'>RESET</button>
@@ -42,11 +42,11 @@
     </div>
   </div>
   <footer>
-    <div class=".golden-small" id="hideFooter" onclick="hideFooter()">
-      (more info)
+    <div class=".golden-small" id="hideFooter" onclick="toggleFooter()">
+      (more info...)
     </div>
     <div id="darkgrey" class="unit whole">
-      <a href="https://github.com/codebully/Dice-Game"><img src="./images/GitHub-Mark-64px.png" class="githubLogo"/></a>
+      <a href="https://github.com/codebully/Dice-Game" target="_blank"><img src="./images/GitHub-Mark-64px.png" class="githubLogo"/></a>
     </div>
   </footer>
 </div>
