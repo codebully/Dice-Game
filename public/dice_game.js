@@ -47,15 +47,18 @@ function compareNumber(playerOne, playerTwo) {
   if (playerOne > playerTwo) {
     playerOneScore += 1 * multiplier
     setDice(playerOne, playerTwo);
+    document.getElementById('status').innerHTML = "<-"
     document.getElementById('playerOneScore').innerHTML = playerOneScore
     multiplier = 1
   } else if (playerOne < playerTwo) {
     playerTwoScore += 1 * multiplier
     setDice(playerOne, playerTwo);
+    document.getElementById('status').innerHTML = "->"
     document.getElementById('playerTwoScore').innerHTML = playerTwoScore
     multiplier = 1
   } else if (playerOne === playerTwo) {
     drawsSuck(playerOne, playerTwo)
+    document.getElementById('status').innerHTML = "<->"
     multiplier += 1;
   }
 }
